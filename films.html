@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Films — Oliver Thompson</title>
+    <meta name="description" content="Cinematic wedding films focused on real emotion, natural moments, and the feeling of the day as it truly unfolded.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Oliver Thompson</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="films.html" class="active">Films</a></li>
+            <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <p class="section-label fade-in">Cinematic Storytelling</p>
+    <h1 class="fade-in fade-in-delay-1">Wedding Films</h1>
+    <p class="fade-in fade-in-delay-2">Cinematic wedding films focused on real emotion, natural moments, and the feeling of the day as it truly unfolded.</p>
+    <div class="page-header-line fade-in fade-in-delay-3"></div>
+</header>
+
+<!-- FILMS INTRO -->
+<section class="films-page-section">
+    <div class="films-intro fade-in">
+        <p>Every wedding has its own rhythm, energy, and story. My films are created to preserve not only how your wedding looked, but how it sounded and felt — the voices, movement, emotion, atmosphere, and moments that photographs alone cannot fully capture.</p>
+        <p style="margin-top: 16px;">The goal is simple: create films that feel timeless, personal, and honest to who you are.</p>
+    </div>
+
+    <div class="films-grid">
+        <!-- Film 1 -->
+        <div class="film-card fade-in">
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/2rWEqxAaGp8?rel=0&modestbranding=1&start=3" title="Wedding Film 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Film 2 -->
+        <div class="film-card fade-in fade-in-delay-1">
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/PJJxkVrOjiA?rel=0&modestbranding=1" title="Wedding Film 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FILMS CTA -->
+<section class="films-cta-section">
+    <div class="container-narrow">
+        <p class="section-label fade-in">Commission A Film</p>
+        <h2 class="section-heading fade-in fade-in-delay-1">Your story, <em>told honestly.</em></h2>
+        <div class="section-body fade-in fade-in-delay-2">
+            <p>If you are looking for photography, videography, or both — I would love to hear about your day and talk about how we can document it in a way that feels completely true to you.</p>
+        </div>
+        <div class="closing-actions fade-in fade-in-delay-3">
+            <a href="contact.html" class="btn btn-dark">Get In Touch</a>
+            <a href="portfolio.html" class="btn btn-outline">View Photography</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo">Oliver Thompson</span>
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="films.html">Films</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <span class="footer-copy">&copy; 2026 Oliver Thompson</span>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('nav').classList.add('scrolled');
+
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
